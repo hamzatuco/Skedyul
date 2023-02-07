@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href = "https://cdn-icons-png.flaticon.com/512/2345/2345338.png">
+  <link rel="stylesheet" href="/style3.css">
+  <link rel="icon" type="image/x-icon" href="/slike/logo2.png">
+  <title>Skedyul - Admin dashboard</title>
+  </head>
+  <body>
+
+
+  <!-- Sidebar  -->
+  
+  <div id="sidebar" class="sidebar">
+  
+    <header>
+      <div class="logo-text">
+        <span class="slika">
+
+          <img src="slike/logo.png" alt="logo">
+        </span>
+
+        <div class="header-text text">
+          <span class="ime">Skedyul</span>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+
+          <li class="nav-link">
+            <a href="#sekcija1">
+              <i class='bx bxs-home ikonice'></i>
+              <span class="text nav-text">Početna</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#sekcija2">
+              <i class='bx bxs-home ikonice'></i>
+              <span class="text nav-text">Dodaj školu</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#sekcija3">
+              <i class='bx bxs-school ikonice'></i>
+              <span class="text nav-text">Škola</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#sekcija6">
+              <i class='bx bxs-chalkboard ikonice'></i>
+              <span class="text nav-text">Kontakt</span>
+            </a>
+          </li>
+          <h1></h1>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Sekcije  -->
+  <section class="sve-sekcije prva-sekcija" id="sekcija1">
+    <h1 class = "PrvaSekcijaHeader1">Ulogovani ste kao korisnik: admin1 <button class="logoutBtn" 
+      style="margin-left: 15px;"
+      onclick="window.location.href = '/';">
+          Odjavite se
+      </button></h1>
+   
+    <div style = "display: flex; flex-direction: row; justify-content: space-around;">
+      <div class ="admin-informacije">
+        <div style="margin-top: 20px;">
+          <h1 style="color:#F0FFFF;"><u>Šta je admin korisnik?</u></h1>
+          <br>
+          <p style="color:#F0FFFF;" >Admin korisnik je korisnik sa privilegijama koje mu omogućuju da: </p>
+          <ul class="ulTekst">
+            <li>Dodaje škole</li>
+            <li>Dodaje osnovne informacije o toj školi</li>
+            <li>Pregledava i briše te iste</li>
+            <li>Modifikuje date podatke o nekoj školi</li>
+          </ul>
+          <br>
+          <hr>
+          <p style="color:#F0FFFF;" >Kada admin kreira jednu školu, on ujedno kreira i login podatke za tu školu. Admin određuje
+             username i password svake škole i tako ima na pregled te podatke kao i mogućnost da ih modifikuje</p>
+        </div>
+      </div>
+
+
+      
+      <div style="margin-left: 50px;" class ="admin-informacije">
+        <div style="margin-top: 20px;">
+          <div style="padding-left: 10px;padding-right: 10px;"><h1 style="color:#F0FFFF;" >Dokumentacija i uputstvo za korištenje stranice</h1></div>
+          <br>
+          <p style="color:#F0FFFF;">
+            Skedyul je aplikacija za automatsko generisanje rasporeda časova. Omogućava vam brzo i jednostavno stvaranje rasporeda časova bez rizika da će se dogoditi pogreška.</p>
+            <ul class="ulTekst"></ul>
+            <li class="liTekst">Registracija:
+            Prije korištenja aplikacije, potrebno se je registrirati na web stranici. Kontaktirajte administratora kako bi se registrovali kao škola.</li>
+            
+            <li class="liTekst">Unos podataka:
+            Nakon registracije, možete početi unositi vaše podatke. To uključuje unos informacija o profesorima, kabinetima i broju časova.</li>
+            
+            <li class="liTekst">Generiranje rasporeda časova:
+            Nakon unosa podataka, možete koristiti opciju "Generiraj raspored časova". Aplikacija će automatski generirati raspored časova koji najbolje odgovara vašim zahtjevima.</li>
+            
+       
+            
+            <li class="liTekst">Podrška:
+            Ako imate bilo kakvih pitanja ili probleme s korištenjem aplikacije, slobodno se obratite našoj podršci putem e-maila ili kontakt forme na web stranici.</li>
+            <br>
+            <p style="color:#F0FFFF;">Napomena: Ova dokumentacija i uputstvo se odnose na verziju aplikacije Skedyul koja je dostupna u vrijeme pisanja. Funkcionalnost i sučelje aplikacije mogu se promijeniti u budućnosti.</p>
+          
+          </ul>
+          <br>
+          <hr>
+        
+        </div>
+      </div>
+
+
+
+      <div style="margin-left: 50px;width: 1500px;"  class ="admin-informacije">
+        <div style="margin-top: 20px;">
+          <h1 style="color:#F0FFFF;"><u>Kod stranice</u></h1>
+          <br>
+          <p style="color:#F0FFFF;" >Kod stranice je otvoren za sve koji hoće da pregledaju isti<br> <br>Na realizaciji koda doprinijeli su: </p>
+          <ul class="ulTekst">
+            <li>Faruk Balihodžić</li>
+            <li>Hamza Tuco</li>
+            <li>Ajla Omeragić</li>
+            <li>Adin Kerić</li>
+            <li>Ahmed Ćosić</li>
+            <li>Arnes Sarajčić</li>
+            <li>Aldin Grabus</li>
+            <li>Bakir Destanović</li>
+
+          </ul>
+          <br>
+          <hr>
+          <a class="kod" href="https://github.com/hamzatuco/Skedyul"><p style="color:#F0FFFF;" >Link za pregled koda</p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sve-sekcije druga-sekcija" id="sekcija2">
+  <h1 class = "DrugaSekcijaHeader">Dodajte školu</h1>
+    <div class = "unos1">
+      <h1 style = "color: #264348; margin-left: 200px; font-size: 40px; margin-top: 20px;">Unesite podatke škole za unos</h1>
+      <div class = "uflex1">
+        <div>
+          <h1 class="nasloviUnosa">Unesite ID škole: </h1>
+          <input class = "inputi">
+          <h1 class="nasloviUnosaDonji">Unesite naziv škole: </h1>
+          <input class = "inputi">
+        </div>
+        <div class="crta2"></div>
+        <div>
+          <h1 class="nasloviUnosa">Unesite grad škole: </h1>
+          <input class = "inputi">
+          <h1 class="nasloviUnosaDonji">Unesite adresu škole: </h1>
+          <input class = "inputi">
+        </div>
+        <div class="crta2"></div>
+        <div>
+          <h1 class="nasloviUnosa">Unesite broj kabineta: </h1>
+          <input class = "inputi">
+          <h1 class="nasloviUnosaDonji">Unesite broj profesora: </h1>
+          <input class = "inputi">
+        </div>
+      </div>
+      <button class = "Dodaj2">
+        Dodaj
+      </button>
+      </div>
+  </section>
+  
+  <section class="sve-sekcije treca-sekcija" id="sekcija3">
+    <h1 class = "TrecaSekcijaHeader">Dodane škole</h1>
+    <center>
+    <div class ="dodane-skole">
+        <h1 style = "margin-top: 10px;">Naziv: MSTS Travnik</h1>
+        <div style="margin-left: 100px;" class = "crta"></div>
+        <h1 style = "margin-top: 10px;">Lokacija: Travnik</h1>
+        <div style="margin-left: 70px;" class = "crta"></div>
+        <h1 style = "margin-top: 10px;">Broj kabineta: 32</h1>
+        <div style="margin-left: 10px;" class = "crta"></div>
+        <h1 style = "margin-top: 10px;">Broj profesora: 56</h1>
+        <div style="margin-left: 10px;" class = "crta"></div>
+        <button class = "Više" id = "dugmeTravnik">Više</button>
+        <div class = "crta"></div>
+        <button class = "Ukloni">Ukloni</button>
+    </div>
+    
+    <div style="margin-top: 10px;" class ="dodane-skole">
+        <h1 style = "margin-top: 10px;">Naziv: MSS Travnik⠀</h1>
+        <div style="margin-left: 100px;" class = "crta"></div>
+        <h1 style = "margin-top: 10px;">Lokacija: Travnik</h1>
+        <div style="margin-left: 70px;" class = "crta"></div>
+        <h1 style = "margin-top: 10px;">Broj kabineta: 32</h1>
+        <div style="margin-left: 10px;" class = "crta"></div>
+        <h1 style = "margin-top: 10px;">Broj profesora: 47</h1>
+        <div style="margin-left: 10px;" class = "crta"></div>
+        <button class = "Više" id = "dugmeTravnik">Više</button>
+        <div class = "crta"></div>
+        <button class = "Ukloni">Ukloni</button>
+    </div>
+    <div style="margin-top: 10px;" class ="dodane-skole">
+      <h1 style = "margin-top: 10px;">Naziv: MSS Donji Vakuf</h1>
+      <div style="margin-left: 69px;" class = "crta"></div>
+      <h1 style = "margin-top: 10px;">Lokacija: Travnik</h1>
+      <div style="margin-left: 70px;" class = "crta"></div>
+      <h1 style = "margin-top: 10px;">Broj kabineta: 21</h1>
+      <div style="margin-left: 10px;" class = "crta"></div>
+      <h1 style = "margin-top: 10px;">Broj profesora: 41</h1>
+      <div style="margin-left: 10px;" class = "crta"></div>
+      <button class = "Više" id = "dugmeTravnik">Više</button>
+      <div class = "crta"></div>
+      <button class = "Ukloni">Ukloni</button>
+  </div>
+    </center>
+<!--DODATNA SEKCIJA ZA MSTS TRAVNIK-->
+<center>
+<div class = "vise-skola" id = "viseTravnik" class = "admin-informacije">
+  <div style = "margin-left: 20px;">
+    <div style ="display: flex; justify-content: row";>
+        <div>
+          <h1 style = "margin-top: 20px;"><u>Više o školi: <i>MSTS Travnik</i></u></h1>
+          <h3 style ="margin-top: 20px;margin-left: -150px;">Broj profesora</h3>
+          <ul class="ulPodaci">56</ul>
+          <h3 style ="margin-top: 20px;margin-left: -205px;">Lokacija</h3>
+          <ul class="ulPodaci">Travnik</ul>
+          <h3 style ="margin-top: 20px;margin-left: -130px;">Skola-username</h3>
+          <ul class="ulPodaci">mststravnik</ul>
+          <h3 style ="margin-top: 20px;margin-left: -130px;">Skola-password</h3>
+          <ul class="ulPodaci">mststravnik123</ul>
+        </div>
+        <div style="margin-top: 50px;">
+          <h3 style ="margin-top: 20px;margin-left: -100px;">Broj kabineta</h3>
+          <ul class="ulPodaci1">32</ul>
+          <h3 style ="margin-top: 20px;margin-left: -140px;">Skola ID</h3>
+          <ul class="ulPodaci1">1</ul>
+          <h3 style ="margin-top: 20px;margin-left: -70px;">Datum kreiranja</h3>
+          <ul style="margin-left: -50px;" class="ulPodaci1">18.01.2023.</ul>
+        </div>
+      </div>
+    <div class = "vise-skole-dugmadi">
+      <button class = "Više" id = "zatvoriTravnik">Zatvori</button>
+      <button style = "background-color: green;" class = "Više">Izmijeni</button>
+      <button class = "Ukloni">Ukloni</button>
+    </div>
+</div>
+</div>
+</center>
+
+<center>
+<!--DODATNA SEKCIJA ZA MSS TRAVNIK-->
+<div class = "vise-skola" id = "viseTravnik1" class = "admin-informacije">
+  <div style = "margin-left: 20px;">
+    <div style ="display: flex; justify-content: row";>
+        <div>
+          <h1 style = "margin-top: 20px;"><u>Više o školi: <i>MSTS Travnik</i></u></h1>
+          <h3 style ="margin-top: 20px;"><u>Broj profesora</u></h3>
+          <ul><li>56</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Lokacija</u></h3>
+          <ul><li>Travnik</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Skola-username</u></h3>
+          <ul><li>mststravnik</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Skola-password</u></h3>
+          <ul><li>mststravnik123</li></ul>
+        </div>
+        <div style="margin-top: 50px;">
+          <h3 style ="margin-top: 20px;"><u>Broj kabineta</u></h3>
+          <ul><li>32</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Skola-ID</u></h3>
+          <ul><li>1</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Datum kreiranja</u></h3>
+          <ul><li>18.01.2023</li></ul>
+        </div>
+      </div>
+    <div class = "vise-skole-dugmadi">
+      <button class = "Više" id = "zatvoriTravnik1">Zatvori</button>
+      <button style = "background-color: green;" class = "Više">Izmijeni</button>
+      <button class = "Ukloni">Ukloni</button>
+    </div>
+</div>
+</div>
+</center>
+
+
+
+<center>
+<!--DODATNA SEKCIJA ZA MSS DVAKUF-->
+<div class = "vise-skola" id = "viseVakuf" class = "admin-informacije">
+  <div style = "margin-left: 20px;">
+    <div style ="display: flex; justify-content: row";>
+        <div>
+          <h1 style = "margin-top: 20px;"><u>Više o školi: <i>MSTS Travnik</i></u></h1>
+          <h3 style ="margin-top: 20px;"><u>Broj profesora</u></h3>
+          <ul><li>56</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Lokacija</u></h3>
+          <ul><li>Travnik</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Skola-username</u></h3>
+          <ul><li>mststravnik</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Skola-password</u></h3>
+          <ul><li>mststravnik123</li></ul>
+        </div>
+        <div style="margin-top: 50px;">
+          <h3 style ="margin-top: 20px;"><u>Broj kabineta</u></h3>
+          <ul><li>32</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Skola-ID</u></h3>
+          <ul><li>1</li></ul>
+          <h3 style ="margin-top: 20px;"><u>Datum kreiranja</u></h3>
+          <ul><li>18.01.2023</li></ul>
+        </div>
+      </div>
+    <div class = "vise-skole-dugmadi">
+      <button class = "Više" id = "zatvoriVakuf">Zatvori</button>
+      <button style = "background-color: green;" class = "Više">Izmijeni</button>
+      <button class = "Ukloni">Ukloni</button>
+    </div>
+</div>
+</div>
+</center>
+  </section>
+
+ 
+
+  <section class="sve-sekcije sesta-sekcija" id="sekcija6">
+    <footer>
+      <br>
+      <br>
+      <div  class="kontakt-text">
+        <h1>Kontakt</h1>
+        <br>
+        <br>
+        <p style="font-family: NexaBold; font-size: 12pt;">Ukoliko imate bilo kakvih pitanja ili nedoumica u vezi stranice, molimo Vas da ispunite formu ispod<br>a mi ćemo se potruditi da Vam odgovorimo u najkraćem roku 🤗</p>
+      </div>
+      <br><br>
+      <form class="kontakt-forma">
+
+        <div class="lijeva-kolona">
+          <input class="kontaktInput" type="text" name="ime-prezime" placeholder="Ime i prezime">
+          
+          <input class="kontaktInput" type="email" name="email" placeholder="Email">
+      
+          <input class="kontaktInput" type="text" name="subject" placeholder="Predmet">
+        </div>
+
+        <div class="desna-kolona">
+          <textarea class="kontaktPoruka" name="message" placeholder="Poruka"></textarea>
+              
+          <input type="button" class="btn-posalji" onclick="location.href='poruka-admin';" value="Pošalji" />
+          
+        </div>
+
+      </form>
+
+    </footer>
+  </section>
+  <script src ="/script1.js"></script>
+  <script src ="/script5.js"></script>
+</body>
+</html>

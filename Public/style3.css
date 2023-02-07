@@ -1,0 +1,956 @@
+@font-face {
+  font-family: 'NexaLight';
+  src: url(../fonts/NexaLight.otf);
+}
+@font-face {
+  font-family: 'NexaBold';
+  src: url(../fonts/NexaBold.otf);
+  font-style: bold;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'NexaSuper';
+  src: url(../fonts/NexaSuper.ttf);
+  font-style: bold;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+p{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: NexaBold;
+}
+
+h1{
+  font-family: NexaSuper;
+}
+
+u{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: NexaSuper;
+  text-decoration: none;
+
+}
+.ulTekst{
+  padding-top: 15px;
+  padding-left: 30px;
+  color: #F0FFFF;
+  font-family: NexaBold;
+}
+
+.liTekst{
+ font-size: 13px;
+  color: #F0FFFF;
+  font-family: NexaLight;
+}
+
+.ulPodaci{
+  text-align: left;
+  font-family: NexaLight;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.ulPodaci1{
+  text-align: left;
+  font-family: NexaLight;
+  padding-top: 10px;
+  padding-left: -30px;
+}
+
+h3{
+  margin-left: -20px;
+  font-family: NexaSuper;
+}
+
+.h3Text{
+  margin-left: -200px;
+  font-family: NexaSuper;
+  font-size: 16px;
+}
+
+.inputiProf{
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #264348;
+  margin-left: -20px;
+  border-radius: 10px;
+  
+}
+
+hr{
+  border: none;
+  padding-bottom: 30px;
+}
+
+li{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: NexaLight;
+  text-decoration: none;
+
+}
+
+/* Glavni Container  */
+
+.container {
+  width: 1200px;
+}
+
+/* Navbar  */
+
+nav {
+  position: fixed;
+  width: 100%;
+  min-height: 8vh;
+ 
+}
+.menu-links{
+  margin-left: -20px;
+}
+.logo {
+  width: 300px;
+  height: 75px;
+  cursor: pointer;
+ }
+
+/* .nav-underline {
+  border-bottom: 2px solid #263e59;
+} */
+
+/* Scroll CSS */
+
+/* .scroll-button {
+  position: absolute;
+  bottom: 7.5%;
+  right: 4%;
+}
+
+.scroll-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+} */
+
+/* Sidebar */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  
+  background-color: #264348;
+}
+
+
+
+
+
+
+.sidebar .logo-text img {
+  width: 100px;
+  /* border-radius: 10px; */
+  margin-right: 20px;
+}
+
+.sidebar .logo-text {
+  margin: 10px 0 0 10px;
+}
+
+.sidebar .text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  /* text-transform: uppercase; */
+}
+
+.sidebar .slika {
+  /* min-width: 60px; */
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li {
+  list-style-type: none;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.sidebar li .ikonice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  min-width: 100px;
+}
+
+.sidebar li .ikonice, 
+.sidebar li .text {
+  color: #fff;
+}
+
+.sidebar header .logo-text {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-text .header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text .ime {
+  font-weight: bold;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100%;
+  transition: 0.25s ease;
+}
+
+.sidebar li a:hover {
+  background-color: rgb(146, 183, 196);
+}
+
+/* Sekcije  */
+
+.sve-sekcije {
+  /* width: 100%; */
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.dobrodoslica {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.prva-sekcija {
+  background-color: #F0FFFF;
+}
+
+.druga-sekcija {
+  background-color: #416970;
+}
+
+.druga1-sekcija {
+  background-color: #416970b9
+}
+
+
+.treca-sekcija {
+  background-color: #F0FFFF;
+}
+
+.cetvrta-sekcija {
+  background-color: #416970b9;
+  
+}
+
+.peta-sekcija {
+  background-color: #F0FFFF;
+}
+
+.sesta-sekcija {
+  background-color: #416970;
+  
+  margin-left: 250px;
+  
+}
+
+footer {
+  width: 1400px;
+  height: 400px;
+  color: #416970;
+  margin: 0 auto;
+}
+
+.kontakt-forma {
+  position: relative;
+  top: 30%;
+  font-family: NexaBold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.kontaktInput{
+  width: 500px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #264348;
+  margin-left: 20px;
+  border-radius: 10px;
+  font-family: NexaBold;
+}
+.kontaktPoruka{
+  padding: 10px;
+  width: 500px;
+  height: 110px;
+  border: 1px solid #264348;
+  border-radius: 10px;
+  font-family: NexaBold;
+  resize: none;
+}
+
+.kontakt-text {
+  position: relative;
+  top: 10%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 36px;
+  color: #F0FFFF ;
+}
+
+.lijeva-kolona {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.desna-kolona {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #264348;
+  margin: 10px 0;
+  border-radius: 20px;
+}
+
+textarea {
+  width: 500px;
+  height: 95px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #264348;
+  margin: 10px 0;
+  border-radius: 20px;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+.btn-posalji {
+  background-color: #264348;
+  color: white;
+  width: 150px; 
+  height: 50px;
+  border-radius: 10px; 
+  margin-right: 70px;
+  cursor: pointer;
+  border: rgb(255, 255, 255) double 7px;
+  margin-left: 410px;
+  font-family: NexaBold;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.btn-raspored {
+  background-color: #264348;
+  color: white;
+  width: 300px; 
+  height: 50px;
+  border-radius: 10px; 
+  margin-top: 150px;
+  cursor: pointer;
+  border: rgb(255, 255, 255) double 7px;
+margin-left: -16px;
+  font-family: NexaBold;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.btn-raspored:hover {
+  background-color: white;
+  color: #264348;
+  width: 300px; 
+  height: 50px;
+  border-radius: 10px; 
+  border: #264348 double 7px;
+  
+  transition: all 0.4s ease;
+}
+
+.btn-odjavi {
+  background-color: #264348;
+  color: white;
+  width: 150px; 
+  cursor: pointer;
+  height: 50px;
+  border-radius: 10px; 
+  margin-right: 80px;
+  
+  border: rgb(255, 255, 255) double 7px;
+  margin-left: 410px;
+  font-family: NexaBold;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.btn-posalji:hover {
+  background-color: white;
+  color: #264348;
+  width: 150px; 
+  height: 50px;
+  border-radius: 10px; 
+  border: #264348 double 7px;
+  
+  transition: all 0.4s ease;
+}
+
+/*===Naslovi sekcija===*/
+.PrvaSekcijaHeader{
+  text-align: center;
+margin-left: 290px;
+  color:#264348;
+  text-align: left;
+
+  font-family: NexaSuper;
+  padding-top: 20px;
+  font-size: 35px;
+  
+}
+
+.PrvaSekcijaHeaderSk{
+  text-align: center;
+margin-left: 290px;
+  color:#F0FFFF;
+  text-align: left;
+
+  font-family: NexaSuper;
+  padding-top: 20px;
+  font-size: 35px;
+  
+}
+
+.PrvaSekcijaHeader1{
+  text-align: center;
+
+  color:#264348;
+  text-align: center;
+  margin-right: 500px;
+
+  font-family: NexaSuper;
+  padding-top: 20px;
+  font-size: 15px;
+  
+}
+
+
+.DrugaSekcijaHeader{
+  padding-top: 10px;
+  text-align: center;
+  font-family: NexaSuper;
+  font-size: 35px;
+  color: aliceblue;
+  margin-left: 290px;
+  text-shadow: -1px -1px 0 #000;
+ 
+}
+
+
+
+
+
+.TrecaSekcijaHeader{
+  padding-top: 20px;
+ 
+  font-family: NexaSuper;
+  font-size: 35px;
+  color:#264348;
+  margin-left: 290px;
+  text-shadow: -1px -1px 0 #000;
+ 
+}
+
+.TrecaSekcijaHeader1{
+  
+ text-align: center;
+  font-family: NexaSuper;
+  font-size: 35px;
+  color:#264348;
+  margin-left: -440px;
+  text-shadow: -1px -1px 0 #000;
+}
+
+.TrecaSekcijaHeader2{
+  padding-top: 20px;
+ 
+  font-family: NexaSuper;
+  font-size: 35px;
+  color:#F0FFFF;
+  margin-left: 290px;
+  text-shadow: -1px -1px 0 #000;
+}
+
+.cetvrta{
+  color:#f1f1f1;
+  margin-left: -60px;
+  font-size: 35px;
+  text-shadow: -1px -1px 0 #000;
+}
+
+.nasloviUnosa{
+  font-family: NexaBold;
+  font-size: 21px;
+  padding-top: 10px;
+}
+
+.nasloviUnosaDonji{
+  font-family: NexaBold;
+  font-size: 21px;
+  padding-top: 50px;
+}
+/*===Unos na sekcijama===*/
+
+.unos1{
+  background-color: aliceblue;
+  width: 1050px;
+  height: 570px;
+  border: #000 double 7px;
+  border-radius: 20px;
+  margin-left: 550px;
+  margin-top: 100px;
+}
+
+.unos11{
+  background-color: rgb(31, 38, 44);
+  width: 1050px;
+  height: 710px;
+  border: #000 double 7px;
+  border-radius: 20px;
+  margin-left: 550px;
+  margin-top: 100px;
+}
+
+.unos3{
+  background-color: aliceblue;
+  width: 530px;
+  height: 260px;
+  border: #000 double 7px;
+  border-radius: 20px;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+
+.rasporedInfo{
+  background-color: rgb(31, 38, 44);
+  width: 550px;
+  height: 570px;
+  border: #000 double 7px;
+  border-radius: 20px;
+  margin-left: 120px;
+  margin-top: 100px;
+}
+
+.unos2{
+  background-color: aliceblue;
+  width: 400px;
+  height: 470px;
+  border: #000 double 7px;
+  border-radius: 20px;
+   margin-left: -550px;
+  margin-top: 200px;
+  
+}
+
+.unos22{
+  background-color: aliceblue;
+  width: 400px;
+  height: 470px;
+  border: #000 double 7px;
+  border-radius: 20px;
+ margin-left: 250px;
+  margin-top: 100px;
+  
+}
+
+.h3Naslovi{
+  margin-left: -20px;
+  font-family: NexaBold;
+  font-size: 13pt;
+  padding-top: 10px;
+}
+
+.crta2{
+  background-color: rgb(0, 0, 0);
+  width: 20px;
+  height: 230px;
+  border: white double 7px;
+  border-radius: 20px;
+}
+
+
+.admin-informacije{
+  background-color: #264348 ;
+  width: fit-content;
+  height: 450px;
+  border: #264348 double 7px;
+  border-radius: 10px;
+  margin-left: 260px;
+  margin-top: 100px;
+}
+
+/*===Dugmadi===*/
+.Dodaj{
+  background-color: #264348;
+  color: white;
+  width: 150px;
+  font-family: NexaBold;
+  font-size: 17px;
+  height: 50px;
+  border: rgb(255, 255, 255) double 7px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-family: NexaBold;
+  transition: all 0.4s ease;
+}
+
+.Dodaj3{
+  background-color: #264348;
+  color: white;
+  width: 150px;
+  font-family: NexaBold;
+  font-size: 17px;
+  height: 50px;
+  border: rgb(255, 255, 255) double 7px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-family: NexaBold;
+  transition: all 0.4s ease;
+}
+
+.DodajProf{
+  background-color: #264348;
+  color: white;
+  width: 150px;
+  font-family: NexaBold;
+  font-size: 17px;
+  height: 50px;
+  border: rgb(255, 255, 255) double 7px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 100px;
+ cursor: pointer;
+  font-family: NexaBold;
+  transition: all 0.4s ease;
+}
+
+.DodajProf:hover {
+  background-color: white;
+  color: #264348;
+  width: 150px; 
+  height: 50px;
+  border-radius: 10px; 
+  border: #264348 double 7px;
+  
+  transition: all 0.4s ease;
+}
+
+.Ukloni{
+  background-color: #e4110a;
+  font-family: NexaBold;
+  color: white;
+  width: 100px;
+  height: 41px;
+  cursor: pointer;
+  border: rgb(255, 255, 255) double 7px;
+  border-radius: 10px;
+}
+
+.Više{
+  background-color: #264348;
+  font-family: NexaBold;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  height: 41px;
+  border: rgb(255, 255, 255) double 7px;
+  border-radius: 10px;
+}
+.logoutBtn{
+  background-color: #264348;
+  font-family: NexaBold;
+  color: white;
+  width:90px;
+  height: 35px;
+  border: rgb(255, 255, 255) solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: -2000px;
+}
+
+.Dodaj:hover{
+  background-color: white;
+  color: #264348;
+  width: 150px; 
+  height: 50px;
+  border-radius: 10px; 
+  border: #264348 double 7px;
+  
+  transition: all 0.4s ease;
+}
+
+.Dodaj2{
+  background-color: #264348;
+  color: white;
+  width: 200px; 
+  height: 60px;
+  border-radius: 10px; 
+  margin-top: 50px; 
+  border: rgb(255, 255, 255) double 7px;
+  margin-left: 410px;
+  font-family: NexaBold;
+  font-size: 21px;
+  transition: all 0.4s ease;
+}
+
+.Dodaj2:hover{
+  background-color: white;
+  color: #264348;
+  width: 200px; 
+  height: 60px;
+  border-radius: 10px; 
+  margin-top: 50px; 
+  border: #264348 double 7px;
+  margin-left: 410px;
+  transition: 0.4s;
+}
+
+.flex2{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.linija{
+  position: relative;
+  height: 937px;
+  border: #000 double 7px;
+  background-color: white;
+  width: 10px;
+  margin-top: -73px;
+
+}
+
+.inputi {
+  width: 230px;
+  border-radius: 10px;
+}
+
+.inputiProf{
+  width: 290px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #264348;
+  margin-left: -20px;
+  border-radius: 10px;
+  font-family: NexaLight;
+  
+}
+
+.inputsi{
+  width: 260px;
+  border-radius: 10px;
+  margin-left: -200px;
+  font-family: NexaBold;
+  color: #264348;
+}
+
+.uflex1{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.uflex2{
+  margin-left: 70px;
+  margin-top: 40px;
+}
+
+/*===Dodano===*/
+.dodane-skole{
+  
+  background-color: aliceblue;
+  width: 1400px;
+  height: 50px;
+  border: #000 double 4px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-left: 300px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.kabineti{
+  font-size:14pt;
+  margin-top: 6px;
+  font-family: NexaSuper;
+}
+
+.dodani-kabineti{
+  background-color: aliceblue;
+  width: 450px;
+  height: 50px;
+  border: #000 double 4px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dodani-profesori{
+  background-color: aliceblue;
+  width: 750px;
+  height: 50px;
+  border: #000 double 4px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+.crta{
+  background-color: rgb(0, 0, 0);
+  width: 2px;
+  height: 41px;
+  border: #000 double 2px;
+  
+}
+
+
+.vise-skola{
+  background-color: aliceblue;
+  width: 1000px;
+  height: 490px;
+  border: #000 double 7px;
+  border-radius: 10px;
+  margin-left: 300px;
+  margin-top: 50px;
+  display: none;
+}
+
+.vise-skole-dugmadi{
+  display: flex; 
+  justify-content: row;
+  margin-top: 50px;
+}
+
+
+.generisi-raspored{
+  background-color: #264348;
+  color: white;
+  width: 150px; 
+  height: 50px;
+  border-radius: 10px; 
+  margin-right: 80px;
+  cursor: pointer;
+  border: rgb(255, 255, 255) double 7px;
+  margin-left: 410px;
+  font-family: NexaBold;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.generisi-raspored:hover{
+  background-color: white;
+    color: black;
+    width: 150px; 
+    height: 50px;
+    border-radius: 10px; 
+    border: #264348 double 7px;
+    
+    transition: all 0.4s ease;
+}
+
+.dodaj-header{
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+}
+
+
+.RASPORED{
+  
+}
+
+.singleDisplay{
+  display: flex;
+  gap: 50px;
+}
+.raspored{
+  display: none;
+  margin-top: 100px;
+  margin-left: 140px;
+}
+.col div{
+  width: 150px;
+  height: 50px;
+  font-family: NexaBold;
+  text-align: center;
+  padding-top: 15px;
+  border: 3px solid white;
+ 
+  color: white;
+}
+
+.uputeRaspored{
+  font-family: NexaLight;
+  color: white;
+  text-align: left;
+}
+.kod:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.kod{
+  text-decoration: none;
+}

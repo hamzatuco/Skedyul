@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="/slike/logo2.png">
+  <link rel="stylesheet" href="/style3.css">
+
+  <title> Skedyul - Škola dashboard</title>
+
+</head>
+<body>
+
+  <!-- Sidebar  -->
+
+  <div class="sidebar">
+    <header>
+      <div class="logo-text">
+        <span class="slika">
+
+          <img src="slike/logo.png" alt="logo">
+        </span>
+
+        <div class="header-text text">
+          <span class="ime">Skedyul</span>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+
+          <li class="nav-link">
+            <a href="#sekcija1">
+              <i class='bx bxs-home ikonice'></i>
+              <span class="text nav-text">Početna</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#sekcija2">
+              <i class='bx bxs-school ikonice'></i>
+              <span class="text nav-text">Dodaj raspored</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#sekcija3">
+              <i class='bx bxs-face ikonice'></i>
+              <span class="text nav-text">Profesori</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#sekcija4">
+              <i class='bx bxs-book ikonice'></i>
+              <span class="text nav-text">Kabinet/Učionice</span>
+            </a>
+          </li>
+          
+         
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Sekcije  -->
+
+  <section class="sve-sekcije prva-sekcija" id="sekcija1">
+    <h1 class = "PrvaSekcijaHeader1">Ulogovani ste kao korisnik: skola1 <button class="logoutBtn" 
+      style="margin-left: 15px;"
+      onclick="window.location.href = '/';">
+          Odjavite se
+      </button></h1>
+      <div style = "display: flex; flex-direction: row; justify-content: space-around;">
+        
+        <div class ="admin-informacije">
+          
+          <div style="margin-top: 20px;">
+            <h1 style="color:#F0FFFF;"><u>Šta je školski korisnik?</u></h1>
+            <br>
+            <p style="color:#F0FFFF;" >Školski korisnik je korisnik sa privilegijama koje mu omogućuju da: </p>
+            <ul class="ulTekst">
+              <li>Dodaje profesore i kabinete</li>
+              <li>Generiše raspored za profesora ili za kabinet.</li>
+              <li>Pregledava i briše te iste podatke</li>
+              <li>Modifikuje date podatke vezane za školu</li>
+            </ul>
+            <br>
+            <hr>
+            <p style="color:#F0FFFF;" >Svaka škola upravlja svojim podacima. Podaci se čuvaju u bazi podataka, koju škola preko našeg interfejsa može pristupi i uređivati kako njima odgovara. Školski login kreira admin.</p>
+          </div>
+        </div>
+        <div style="margin-left: 50px;" class ="admin-informacije">
+          <div style="margin-top: 20px;">
+            <div style="padding-left: 10px;padding-right: 10px;"><h1 style="color:#F0FFFF;" >Dokumentacija i uputstvo za korištenje stranice</h1></div>
+            <br>
+            <p style="font-family: NexaLight;color:#F0FFFF;">Cilj projekta je bio da svaka škola može da sama upravlja svojim podacima, bez nekih uputa, ili nekog stručnog poznavanja softvera. Samim tim smo, vođeni ovim ciljem, napravili veoma user-friendly stranicu tako da je svi mogu koristiti.</p>
+            <br>
+            <hr>
+            <p style="color:#F0FFFF;" >Škola ima mogućnost da unosi podatke o svojim profesorima, unosi nazive kabineta, spaja ove unešene podatke, i po njima kreira raspored. Svaka funkcionalnost sajta ima posebnu sekciju, tako da se svako može snaći na sajtu.</p>
+          </div>
+        </div>
+  </section>
+  
+  <section class="sve-sekcije druga1-sekcija" id="sekcija2">
+    <h1 class = "PrvaSekcijaHeaderSk"><u>Generisanje rasporeda</u></h1>
+   
+     <center> 
+     
+   <div id="rasporedDiv" class="rasporedInfo">
+    <h1 style="font-family: NexaSuper;color: #f1f1f1; margin-top: 20px;text-align: center;">Uputa za generisanje rasporeda</h1>
+    <br><br>
+    <p class="uputeRaspored">
+      Na sekciji se nalaze inputi kojima unosite podatke vezane za generisanje rasporeda kao npr. Ime profesora, predmet, sedmicna norma. Kada zbir normi profesora bude između 30 i 35, pojavi se dugme koje uzme unešene vrijednosti i generiše raspored.
+      </p><br>
+      <p  class="uputeRaspored">Algoritam radi na način tako da se uzme random kombinacija i na tom polju se upiše ime profesora i predmet. Ovaj postupak se ponavlja onoliko puta koliko profesora ima sedmično časova. Nakon što se unese kombinacija , tj. određeni čas, isti se izbriše i više se ne može ponoviti.
+      </p><br>
+      <p class="uputeRaspored">Kada se svi časovi popune isti raspored se ispiše.
+    </p>
+    <button id ="Dodaj-Raspored-Profesor" class = "btn-raspored" 
+   onclick="document.getElementById('okvir').style.display='block';
+   document.getElementById('rasporedDiv').style.display='none';
+   document.getElementById('Dodaj-Raspored-Profesor').style.display='none'">
+    Generišite raspored
+  </button>
+   </div>
+   
+  </center>
+    <div id="okvir" class="unos11">
+      <h1 id="generisanih1" style="color:#f1f1f1;text-align: center;padding-top: 20px;font-size: 30pt;display: none;margin-bottom: -40px;">Generisani raspored</h1>
+      <center>
+    <div class="raspored">
+      <div class="col">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="c5"></div>
+        <div class="c6"></div>
+        <div class="c7"></div>
+      </div>
+      <div class="col">
+        <div class="c8"></div>
+        <div class="c9"></div>
+        <div class="c10"></div>
+        <div class="c11"></div>
+        <div class="c12"></div>
+        <div class="c13"></div>
+        <div class="c14"></div>
+      </div>
+      <div class="col">
+        <div class="c15"></div>
+        <div class="c16"></div>
+        <div class="c17"></div>
+        <div class="c18"></div>
+        <div class="c19"></div>
+        <div class="c20"></div>
+        <div class="c21"></div>
+      </div>
+      <div class="col">
+        <div class="c22"></div>
+        <div class="c23"></div>
+        <div class="c24"></div>
+        <div class="c25"></div>
+        <div class="c26"></div>
+        <div class="c27"></div>
+        <div class="c28"></div>
+      </div>
+      <div class="col">
+        <div class="c29"></div>
+        <div class="c30"></div>
+        <div class="c31"></div>
+        <div class="c32"></div>
+        <div class="c33"></div>
+        <div class="c34"></div>
+        <div class="c35"></div>
+      </div>
+    </div>
+  </center>
+<center>
+    <h1 class="skloniOvo" style = "margin-top: 20px;color: white;margin-bottom: 20px;"><u>Unesite podatke profesora</u></h1></center>
+    <div style="margin-left: 250px; color: white; display: none;" class = "RASPORED">
+      <div class = "uflex2" id="dodavanjeProf">
+        <h3 class="h3Text">Unesite ID profesora: </h3>
+        <input class = "inputsi profID">
+        <h3 class="h3Text">Unesite ime profesora: </h3>
+        <input class = "inputsi proff">
+        <h3 class="h3Text">Unesite naziv predmeta: </h3>
+        <input class = "inputsi predmet">
+        <h3 class="h3Text">Unesite časova u normi profesora: </h3>
+        <input class = "inputsi broj">
+        <h3 class="h3Text">Unesite kabinet: </h3>
+        <input class = "inputsi kabinet">
+        <br>
+        <center>
+        <button class = "DodajProf" id="dodajProfRas">
+          Dodaj
+        </button>
+        <button style="margin-top: 20px;" class = "main-btn DodajProf" id="" onclick="kraj();document.getElementById('okvir').style.height ='550px';document.getElementById('generisanih1').style.display ='block'">
+          Generiši
+        </button>
+      </center>
+      </div>
+      <div class="display" style="margin-left: 70px; margin-top: 40px;">
+        <h1 style="font-size: 16px;">Dodano</h1>
+
+      </div>
+    </div>
+    </div>
+  </section>
+  
+  <section class="sve-sekcije treca-sekcija" id="sekcija3">
+    
+    <h1 class = "TrecaSekcijaHeader">Dodaj profesora</h1>
+    
+    
+    <div class = "flex2">
+      <div class = "unos22">
+        <center>
+        <h1 style = "margin-top: 20px;"><u>Unesite podatke profesora</u></h1></center>
+        <div class = "uflex2">
+          <h3 style="padding-top: 0px;" class="h3Naslovi">Unesite ID profesora: </h3>
+          <input type="number" class = "inputiProf" id="profID" value="4">
+          <h3 class="h3Naslovi">Unesite ime profesora: </h3>
+          <input class = "inputiProf" id="profIme">
+          <h3 class="h3Naslovi">Unesite normu profesora: </h3>
+          <input type="number" class = "inputiProf" id="profNorma">
+          <br>
+          <button type="number" class = "Dodaj" id="dodajProf">
+            Dodaj
+          </button>
+        </div>
+      </div>
+      <div class ="linija"></div>
+      <div class = "Uneseno">
+        <h1 class="TrecaSekcijaHeader1">Uneseni profesori</h1>
+        <div  class = "dodani-profesori">
+          <h1 style = "margin-top: 10px;">ID: 1</h1>
+          <div class = "crta"></div>
+          <h1 style = "margin-top: 10px;">Ime: Mujo Mujic</h1>
+          <div class = "crta"></div>
+          <h1 style = "margin-top: 10px;">Broj časova u normi: 18</h1>
+          <div class = "crta"></div>
+          <button class = "Ukloni">Ukloni</button>
+        </div>
+        <div style ="margin-top: 10px;" class = "dodani-profesori">
+          <h1 style = "margin-top: 10px;">ID: 2</h1>
+          <div class = "crta"></div>
+          <h1 style = "margin-top: 10px;">Ime: Suljo Suljic</h1>
+          <div class = "crta"></div>
+          <h1 style = "margin-top: 10px;">Broj časova u normi: 25</h1>
+          <div class = "crta"></div>
+          <button class = "Ukloni">Ukloni</button>
+        </div>
+        <div style ="margin-top: 10px;" class = "dodani-profesori">
+          <h1 style = "margin-top: 10px;">ID: 3</h1>
+          <div class = "crta"></div>
+          <h1 style = "margin-top: 10px;">Ime: Haso Hasic</h1>
+          <div class = "crta"></div>
+          <h1 style = "margin-top: 10px;">Broj časova u normi: 35</h1>
+          <div class = "crta"></div>
+          <button class = "Ukloni">Ukloni</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sve-sekcije cetvrta-sekcija" id="sekcija4">
+    <div></div>
+    <h1 class = "TrecaSekcijaHeader2">Dodaj kabinet</h1>
+    <br><br>
+    <div class = "flex2">
+
+      <div class = "unos3">
+        <center>
+        <h1 style = "margin-top: 20px">Unesite podatke o kabinetu</h1></center>
+        <div class = "uflex2">
+          <h3 class="h3Naslovi">Unesite naziv kabineta: </h3>
+          <input style="width: 250px;" class = "inputiProf" id="kabinetIme">
+
+          <button class = "Dodaj" id="dodajKab">
+            Dodaj
+          </button>
+        </div>
+      
+      </div>
+      <div class = "Uneseno">
+        <h2 class="cetvrta">Kabineti</h2>
+        <div style = "display: flex; justify-content: space-evenly;">
+          <div style="margin-left: -60px;" class="lijeviDiv">
+            <div class = "dodani-kabineti">
+              <h2 class="kabineti">ID: 1</h2>
+              <div class = "crta"></div>
+              <h2 class="kabineti">Naziv: kabinet1</h2>
+              <div class = "crta"></div>
+              <button class = "Ukloni">Ukloni</button>
+            </div>
+            <div class = "dodani-kabineti">
+              <h2 class="kabineti">ID: 3</h2>
+              <div class = "crta"></div>
+              <h2 class="kabineti">Naziv: kabinet1</h2>
+              <div class = "crta"></div>
+              <button class = "Ukloni">Ukloni</button>
+            </div>
+            <div class = "dodani-kabineti">
+              <h2 class="kabineti">ID: 5</h2>
+              <div class = "crta"></div>
+              <h2 class="kabineti">Naziv: kabinet1</h2>
+              <div class = "crta"></div>
+              <button class = "Ukloni">Ukloni</button>
+            </div>
+          </div>
+          <div style="margin-right: -130px;" class="desniDiv">
+            <div style="margin-left: 20px;" class = "dodani-kabineti">
+              <h2 class="kabineti">ID: 2</h2>
+              <div class = "crta"></div>
+              <h2 class="kabineti">Naziv: kabinet1</h2>
+              <div class = "crta"></div>
+              <button class = "Ukloni">Ukloni</button>
+            </div>
+            <div style="margin-left: 20px;" class = "dodani-kabineti">
+              <h2 class="kabineti">ID: 4</h2>
+              <div class = "crta"></div>
+              <h2 class="kabineti">Naziv: kabinet1</h2>
+              <div class = "crta"></div>
+              <button class = "Ukloni">Ukloni</button>
+            </div>
+            <div style="margin-left: 20px;" class = "dodani-kabineti">
+              <h2 class="kabineti">ID: 6</h2>
+              <div class = "crta"></div>
+              <h2 class="kabineti">Naziv: kabinet1</h2>
+              <div class = "crta"></div>
+              <button class = "Ukloni">Ukloni</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="sve-sekcije sesta-sekcija" id="sekcija6">
+    <footer>
+      <br>
+      <br>
+      <div  class="kontakt-text">
+        <h1>Kontakt</h1>
+        <br>
+        <br>
+        <p style="font-family: NexaBold; font-size: 12pt;">Ukoliko imate bilo kakvih pitanja ili nedoumica u vezi stranice, molimo Vas da ispunite formu ispod<br>a mi ćemo se potruditi da Vam odgovorimo u najkraćem roku 🤗</p>
+      </div>
+      <br><br>
+      <form class="kontakt-forma">
+
+        <div class="lijeva-kolona">
+          <input class="kontaktInput" type="text" name="ime-prezime" placeholder="Ime i prezime">
+          
+          <input class="kontaktInput" type="email" name="email" placeholder="Email">
+      
+          <input class="kontaktInput" type="text" name="subject" placeholder="Predmet">
+        </div>
+
+        <div class="desna-kolona">
+          <textarea class="kontaktPoruka" name="message" placeholder="Poruka"></textarea>
+              
+          <input type="button" class="btn-posalji" onclick="location.href='poruka-admin';" value="Pošalji" />
+        </div>
+
+      </form>
+
+    </footer>
+  </section>
+
+  <script src="/script5.js"></script>
+
+</body>
+</html>

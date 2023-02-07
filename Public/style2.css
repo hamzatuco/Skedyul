@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'NexaLight';
+    src: url(../fonts/NexaLight.otf);
+  }
+  @font-face {
+    font-family: 'NexaBold';
+    src: url(../fonts/NexaBold.otf);
+    font-style: bold;
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'NexaSuper';
+    src: url(../fonts/NexaSuper.ttf);
+    font-style: bold;
+    font-weight: 300;
+  }
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #264348;
+}
+.containOdabir{
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 280px;
+    background-color:  #F0FFFF;
+    border-radius: 2%;
+    border: 10px double #264348 ;
+}
+
+.imgOdabir{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50px;
+}
+
+.logoSkola{
+    padding-top: 30px;
+    
+    width: 50px;
+}
+.containSkola{
+    display: flex;
+    flex-direction: column;
+    font-family: NexaSuper;
+    margin-top: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 460px;
+    background-color: #F0FFFF;
+    border-radius: 5%;
+    border: 10px double black;
+}
+
+.containAdmin{
+    display: flex;
+    flex-direction: column;
+    font-family: NexaSuper;
+    margin-top: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 550px;
+    background-color: #F0FFFF;
+    border-radius: 5%;
+    border: 10px double black;
+}
+
+.form h1{
+    
+    text-align: center;
+    font-family: NexaSuper;
+    color: #264348;
+    
+}
+
+
+.fields input{
+    display: flex;
+    height: 27px;
+   
+    padding-left: 15px;
+    width: 200px;
+    margin-bottom: 20px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    font-family: NexaLight;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #264348;
+}
+input:focus{
+    outline: none;
+}
+
+#btnOdabir{
+    background-color: #264348;
+    width: 300px;
+    height: 50px;
+    border-radius: 5cm;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border: 5px double white;
+    transition: background-color  330ms ;
+    font-family: NexaBold;
+  }
+
+  #btnSkola{
+    background-color: #264348;
+    width: 300px;
+    height: 50px;
+    border-radius: 5cm;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border: 5px double white;
+    transition: background-color  330ms ;
+    font-family: NexaBold;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .btnPrijava{
+    background-color: #264348;
+    width: 300px;
+    height: 50px;
+    border-radius: 5cm;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border: 5px double white;
+    transition: background-color  330ms ;
+    font-family: NexaBold;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .btnBack{
+    background-color: #264348;
+    width: 300px;
+    height: 50px;
+    border-radius: 5cm;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border: 5px double white;
+    transition: background-color  330ms ;
+    font-family: NexaBold;
+    margin-top: -5px;
+    margin-bottom: 30px;
+  }
+#btn:hover{
+    background-color: #e1e6e1;
+    color: #000;
+    /* border: 1px solid #2a754c; */
+  }
+.fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    margin-top: 10px;
+    text-decoration: none;
+}
+a:visited{
+    color: #264348;
+}
+a:hover{
+    color: black;
+}
+
+p{
+    font-family: NexaBold;
+    text-align: left;
+    margin-left: 5px;
+}
+/*=== NASLOVI (h1, h2, h3...)===*/
+.naslov{
+    
+    margin-top: 10vh;
+    color: whitesmoke;
+    font-size: 45px;
+    font-family: NexaSuper;
+}
+
+.login-naslov{
+    margin-top: -10px;
+    font-size: 25px;
+    font-family: NexaSuper;
+    color: #264348;
+}
