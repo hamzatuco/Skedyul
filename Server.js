@@ -2,7 +2,7 @@ const express = require('express')
 const mysql = require('mysql')
 const bodyParser = require('body-parser');
 const session = require('express-session');
-
+//asdasdas
 const app = express();
 
 app.use(bodyParser.json());
@@ -33,6 +33,12 @@ app.get('/usmjeri-stranicu', (req, res) => {
 app.get('/poruka-admin', (req, res) => {
   res.sendFile(`${__dirname}/Views/PorukaAdmin.html`);
 });
+
+app.get('/poruka-skola', (req, res) => {
+  res.sendFile(`${__dirname}/Views/PorukaSkola.html`);
+});
+
+
 
 app.get('/usmjeri-stranicuSkola', (req, res) => {
   res.sendFile(`${__dirname}/Views/UsmjeriSkola.html`);

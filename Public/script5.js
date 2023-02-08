@@ -1,3 +1,4 @@
+
 /* Rasporedivanje casova konstante */
 
 class Raspored {

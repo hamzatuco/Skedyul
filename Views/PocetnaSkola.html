@@ -132,12 +132,7 @@
    
   </center>
     <div id="okvir" class="unos11">
-      <!--Toggle za smjene-->
-      <div class="switch-button">
-        <input class="switch-button-checkbox" type="checkbox"></input>
-        <label class="switch-button-label" for=""><span class="switch-button-label-span">Prva smjena</span></label>
-      </div>    
-        <!--Toggle za smjene-->
+      
       <h1 id="generisanih1" style="color:#f1f1f1;text-align: center;padding-top: 20px;font-size: 30pt;display: none;margin-bottom: -40px;">Generisani raspored</h1>
       <center>
     <div class="raspored">
@@ -201,10 +196,19 @@
         <div class="c34"></div>
         <div class="c35"></div>
       </div>
+    
     </div>
+    
   </center>
 <center>
-    <h1 class="skloniOvo" style = "margin-top: 20px;color: white;margin-bottom: 20px; "><u>Unesite podatke profesora</u></h1></center>
+    <h1 class="skloniOvo" style = "margin-top: 20px;color: white;margin-bottom: 20px; "><u>Unesite podatke za generisanje rasporeda</u></h1></center>
+    <br><br>
+    <!--Toggle za smjene-->
+    <div id="switch" class="switch-button">
+      <input class="switch-button-checkbox" type="checkbox"></input>
+      <label  class="switch-button-label" for=""><span class="switch-button-label-span">Prva smjena</span></label>
+    </div>    
+      <!--Toggle za smjene-->
     <div style="margin-left: 250px; color: white; display: none;" class = "RASPORED">
       <div class = "uflex2" id="dodavanjeProf">
         <h3 class="h3Text">Unesite ime profesora: </h3>
@@ -220,7 +224,7 @@
         <button class = "DodajProf" id="dodajProfRas">
           Dodaj
         </button>
-        <button style="margin-top: 20px;" class = "main-btn DodajProf" id="" onclick="kraj();document.getElementById('okvir').style.height ='550px';document.getElementById('generisanih1').style.display ='block'">
+        <button style="margin-top: 20px;" class = "main-btn DodajProf" id="" onclick="kraj();document.getElementById('okvir').style.height ='610px';document.getElementById('generisanih1').style.display ='block';document.getElementById('switch').style.display='none'">
           Generiši
         </button>
       </center>
@@ -385,7 +389,7 @@
         <div class="desna-kolona">
           <textarea class="kontaktPoruka" name="message" placeholder="Poruka"></textarea>
               
-          <input type="button" class="btn-posalji" onclick="location.href='poruka-admin';" value="Pošalji" />
+          <input type="button" class="btn-posalji" onclick="location.href='poruka-skola';" value="Pošalji" />
         </div>
 
       </form>
