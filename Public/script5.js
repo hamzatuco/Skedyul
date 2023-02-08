@@ -21,7 +21,7 @@ let dani = [
   ["", "", "", "", "","",""],
   ["", "", "", "", "","",""]
 ];
-let profIDD = document.querySelector(".profID");
+let profIDD = 1;
 let profInput = document.querySelector(".proff");
 let predmet = document.querySelector(".predmet");
 let brojInput = document.querySelector(".broj");
@@ -29,23 +29,25 @@ let kabinet = document.querySelector(".kabinet");
 
 /* Rasporedivanje casova algoritam */
 document.querySelector("#dodajProfRas").addEventListener("click", e=>{
-      sedmicniCasovi+=parseInt(brojInput.value);
-      if(sedmicniCasovi>=30 && sedmicniCasovi<=35) document.querySelector(".main-btn").style.display = "block";
+    if(profInput.value !="" && predmet.value!="" && brojInput.value!="" && kabinet.value!=""){
+        sedmicniCasovi+=parseInt(brojInput.value);
+        if(sedmicniCasovi>=30 && sedmicniCasovi<=35) document.querySelector(".main-btn").style.display = "block";
         else document.querySelector(".main-btn").style.display = "none";
-      lista.push(new Raspored(profIDD.value, profInput.value, predmet.value, brojInput.value, kabinet.value));
-      document.querySelector(".display").innerHTML += `<div class="singleDisplay" >
-       <h3>${profIDD.value}</h3> 
-       <h3>${profInput.value}</h3> 
-       <h3>${predmet.value}</h3> 
-       <h3>${brojInput.value}</h3>
-       <h3>${kabinet.value}</h3>
-       </div>`;
-       console.log(profInput.value);
-      profIDD.value = "";
-      profInput.value = "";
-      predmet.value = "";
-      brojInput.value = "";
-      kabinet.value = "";
+        lista.push(new Raspored(profIDD, profInput.value, predmet.value, brojInput.value, kabinet.value));
+        document.querySelector(".display").innerHTML += `<div class="singleDisplay" >
+        <h3>${profIDD}</h3> 
+        <h3>${profInput.value}</h3> 
+        <h3>${predmet.value}</h3> 
+        <h3>${brojInput.value}</h3>
+        <h3>${kabinet.value}</h3>
+        </div>`;
+        profIDD++;
+        profInput.value = "";
+        predmet.value = "";
+        brojInput.value = "";
+        kabinet.value = "";
+    }
+    else alert("Popunite sva polja")
 });
 function kraj(){
     document.querySelector(".RASPORED").style.display = "none";
@@ -127,16 +129,16 @@ document.querySelector("#Dodaj-Raspored-Profesor").addEventListener("click", ()=
 });
 
 /*Dodavanje profesora konstante*/ 
-const profID = document.querySelector("#profID");
+let profID = 4;
 const profIme = document.querySelector("#profIme");
 const profNorma = document.querySelector("#profNorma");
 const dodajProf = document.querySelector("#dodajProf");
 
 /*Dodavanje profesora*/ 
 dodajProf.addEventListener("click", e=>{
-   if(profID.value!= "" && profIme.value!= "" && profNorma.value!= "" ){
+   if(profIme.value!= "" && profNorma.value){
     document.querySelector("#sekcija3 .Uneseno").innerHTML += `<div style ="margin-top: 10px;" class = "dodani-profesori">
-    <h1 style = "margin-top: 10px;">ID:  ${profID.value}</h1>
+    <h1 style = "margin-top: 10px;">ID:  ${profID}</h1>
     <div class = "crta"></div>
     <h1 style = "margin-top: 10px;">Ime: ${profIme.value}</h1>
     <div class = "crta"></div>
@@ -144,7 +146,7 @@ dodajProf.addEventListener("click", e=>{
     <div class = "crta"></div>
     <button class = "Ukloni">Ukloni</button>
     </div>`;
-    profID.value = "";
+    profID++;
     profIme.value = "";
     profNorma.value = "";
    }
@@ -191,3 +193,25 @@ e.addEventListener("click", ()=>{
     e.parentElement.remove();
 })
 });
+
+/* Prva druga smjena */
+let vremena = document.querySelectorAll(".vrijeme");
+
+  document.querySelector(".switch-button-checkbox").addEventListener("change", e=>{
+  vremena.forEach(e=>{
+    console.log("gas");
+    if(e.textContent=="8:00") e.textContent="14:00";
+    else if(e.textContent=="8:50") e.textContent="14:50";
+    else if(e.textContent=="9:40") e.textContent="15:40";
+    else if(e.textContent=="10:40") e.textContent="16:40";
+    else if(e.textContent=="11:30") e.textContent="17:30";
+    else if(e.textContent=="12:20") e.textContent="18:20";
+    else if(e.textContent=="14:00") e.textContent="8:00";
+    else if(e.textContent=="14:50") e.textContent="8:50";
+    else if(e.textContent=="15:40") e.textContent="9:40";
+    else if(e.textContent=="16:40") e.textContent="10:40";
+    else if(e.textContent=="17:30") e.textContent="11:30";
+    else if(e.textContent=="18:20") e.textContent="12:20";
+
+  })
+})
